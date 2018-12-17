@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+<title>Oh's web lab[Login]</title>
+</head>
+<body>
+<form action="login.php" autocomplete="on">
+    <fieldset>
+        <lable class="reg" id="user id">아이디 : </lable><input type = "text" id="user id" size="10" autofocus required>
+        <label>비밀번호 : <input type = "password" id = "user pw" size="10"></label>
+        <input type="submit" title="로그인" value="로그인">
+    </fieldset>
+</form>
+<br>
+<br>
+<br>
+<p><label>Oh's web lab complete percentage</label></p>
+<progress value="20" max="100"></progress>
+<br>
+<br>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="http://www.naver.com">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+</body>
+</html>
