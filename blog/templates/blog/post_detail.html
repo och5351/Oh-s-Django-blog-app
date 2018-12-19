@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class = "content">
+        <br>
+        <hr>
+        {% if post.published_date %}
+        {% endif %}
+        <h3><a href="http://127.0.0.1:8000/">메인</a></h3>
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+        <hr>
+        </div>
+{% endblock %}
