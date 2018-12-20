@@ -1,0 +1,8 @@
+h1 a {color: #FCA205;}
+body {padding-left: 15px;}
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}

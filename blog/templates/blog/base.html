@@ -1,16 +1,23 @@
 <!doctype html>
+{% load static %}
 <html lang="ko">
     <head>
         <meta charset="utf-8">
         <title>Oh's web lab[Login]</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body style="background:black; color:white">
         <div class="pageheader">
             <br>
             <br>
-            <p>장고 게시물</p>
+            {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            {% endif %}
+            <h2><a href="/">Oh's web lab</a></h2>
             <p><label>Oh's web lab complete percentage</label></p>
-            <progress value="60" max="100"></progress>
+            <progress value="80" max="100"></progress>
         </div>
         <div class= "content container">
             {% block content %}
